@@ -6,11 +6,11 @@ export default function ComParametro(props) {
         <div>
             <h2> {props.titulo}</h2>
             <p>
-                <strong>{ props.aluno } </strong>
+                <strong>{props.aluno} </strong>
                 tem nota
-                <strong> { props.nota } </strong>
+                <strong> {props.nota} </strong>
                 e está
-                <strong> { status }</strong>!
+                <strong> {status}</strong>!
             </p>
         </div>
     )

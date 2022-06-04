@@ -11,6 +11,9 @@ import ListaAlunos from "./components/Repeticao/ListaAlunos";
 import TabelaProdutos from "./components/Repeticao/TabelaProdutos";
 import ParOuImpar from "./components/condicional/ParOuImpar";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaFilho from "./components/comunicacao/IndiretaFilho";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (_) => (
@@ -18,21 +21,25 @@ export default (_) => (
     <h1>Fundamentos React</h1>
 
     <div className="Cards">
+  
+      <Card titulo="#10 - Comunicação Indireta" color="#8BAD39">
+        <IndiretaPai></IndiretaPai>
+      </Card>
+      <Card titulo="#09 - Comunicação Direta" color="#59323C">
+        <DiretaPai></DiretaPai>
+      </Card>
       <Card titulo="#08 - Renderização Condicional" color="#982395">
         <ParOuImpar numero={22} />
-        <UsuarioInfo usuario={{ nome: 'Fernando' }} />
+        <UsuarioInfo usuario={{ nome: "Fernando" }} />
         {/* <UsuarioInfo usuario={{ email: 'fer@nando.com' }} />
         <UsuarioInfo usuario={{}} /> */}
       </Card>
-
       <Card titulo="#07 - Tabela Repetição" color="#3A9AD9">
         <TabelaProdutos></TabelaProdutos>
       </Card>
-
       <Card titulo="#06 - Repetição" color="#FF4C65">
         <ListaAlunos></ListaAlunos>
       </Card>
-
       <Card titulo="#05 Componente com Filhos" color="#00C8F8">
         <Familia sobrenome="Silva">
           <FamiliaMembro nome="Pedro" />
@@ -40,15 +47,12 @@ export default (_) => (
           <FamiliaMembro nome="Gustavo" />
         </Familia>
       </Card>
-
       <Card titulo="#04 Desafio Aleatório" color="#FA6900">
         <Aleatorio min={1} max={60} />
       </Card>
-
       <Card titulo="#03 Fragmento" color="#E94C6F">
         <Fragmento />
       </Card>
-
       <Card titulo="#02 Com Parâmetro" color="#E8B71A">
         <ComParametro
           titulo="Situaçao do Aluno"
@@ -56,7 +60,6 @@ export default (_) => (
           nota={9.3}
         />
       </Card>
-
       <Card titulo="#01 Primeiro Componente" color="#588C73">
         <Primeiro></Primeiro>
       </Card>
